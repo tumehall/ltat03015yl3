@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ee">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content=""> 
+        <meta name="author" content="">
+        <title>Ostukorv</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        <!-- minu CSS -->
+        <link rel="stylesheet" href="custom.css">
+        <script>
+            function showAddress() {
+                var x = document.getElementById("showaddress");
+                var y = document.getElementById("showpakiautomaat")
+                y.style.display = "none";
+                x.style.display = "block";
+            }
+            function showPakiautomaat() {
+                var x = document.getElementById("showaddress");
+                var y = document.getElementById("showpakiautomaat")
+                y.style.display = "block";
+                x.style.display = "none";
+            }
+            function showNone() {
+                var x = document.getElementById("showaddress");
+                var y = document.getElementById("showpakiautomaat")
+                y.style.display = "none";
+                x.style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <!-- päis -->
+        <header class="py-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 my-3 text-center"><img src="logo2.png" width="50%"></div>              
+                </div>          
+            </div>
+        </header>
+        <!-- navigatsioon -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Uued tooted</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vannitooted</a> 
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                            <a class="dropdown-item" href="#">Vannisoolad</a> 
+                            <a class="dropdown-item" href="#">Vannipiimad</a> 
+                            <a class="dropdown-item" href="#">Vannipommid</a>
+                            <a class="dropdown-item" href="list.html">Seebid ja du&scaron;igeelid</a>
+                        </div> 
+                    </li> 
+                    <li class="nav-item dropdown"> 
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kehahooldus</a> 
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                            <a class="dropdown-item" href="#">Kehakreemid</a> 
+                            <a class="dropdown-item" href="#">Keha&otilde;lid</a> 
+                            <a class="dropdown-item" href="#">Kehakoorijad</a> 
+                            <a class="dropdown-item" href="#">Deodorandid</a> 
+                            <a class="dropdown-item" href="#">K&auml;te ja jalgade hooldus</a>  
+                        </div> 
+                    </li> 
+                    <li class="nav-item dropdown"> 
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">N&auml;ohooldus</a> 
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                            <a class="dropdown-item" href="#">Puhastus ja toniseerimine</a> 
+                            <a class="dropdown-item" href="#">Niisutus ja toitmine</a> 
+                            <a class="dropdown-item" href="#">Koorijad ja maskid</a> 
+                        </div> 
+                    </li> 
+                </ul>
+                <!-- search -->
+                <form class="form-inline m-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Otsi" aria-label="Search">
+                    <button class="btn btn-outline-white my-2 my-sm-0" type="submit"><svg class="lnr lnr-magnifier"><use xlink:href="#lnr-magnifier"></use></svg></button>
+                </form>
+            </div>
+            <!-- cart -->
+            <a href="cart.html"><button class="btn btn-dark my-2 my-sm-0" type="submit"><svg class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use></svg></button></a>
+        </nav> 
+        <section>
+            <!-- breadcrumb -->
+            <nav aria-label="breadcrumb" >
+                <ol class="breadcrumb bg-white my-2">
+                    <li class="breadcrumb-item"><a href="index.html">Avaleht</a></li>
+                    <li class="breadcrumb-item active">Ostukorv</li>
+                </ol>
+            </nav>
+        </section>
+        <!-- ostukorv -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-start flex-column">
+                        <div class="mb-auto p-2"><h4>Ostukorvis on 1 toode</h4></div>    
+                        <div class="mb-auto p-2 row">
+                            <div class="col-lg-6">
+                                <img src="soap.png" width="100%">
+                            </div>
+                            <div class="col-lg-6">
+                                <p>15.99&#8364;</p>
+                                <p>Toode 1</p>
+                                    <select class="form-control col-lg-5 form-sm" id="kogus">
+                                        <option>0</option>
+                                        <option selected="selected">1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                <br/>
+                            </div>            
+                        </div>
+                        <div class="p-2">
+                            <p>Tarne: <span class="text-primary">tasuta</span></p>
+                            <p>Kokku: <span class="text-primary">15.99&#8364;</span></p>
+                        </div>
+                        <div class="p-2 mx-auto">
+                            <a href="#" class="btn btn-dark btn-lg mb-3">Uuenda ostukorvi sisu</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="row">
+                        <div class="mb-auto p-2"><h4>Tellija andmed</h4></div>
+                    </div>
+                    <div class="form-group">
+                    <div class="mb-auto row mt-3">
+                       <div class="col-6 pr-1">
+                            <input type="text" name="eesnimi" class="form-control m-1" placeholder="eesnimi*" />
+                        </div>
+                        <div class="col-6 pl-1">
+                            <input type="text" name="perenimi" class="form-control m-1" placeholder="perekonnanimi*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="ettevote" class="form-control m-1" placeholder="ettevõtte nimi" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="email" class="form-control m-1" placeholder="e-posti aadress*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="telefon" class="form-control m-1" placeholder="telefoninumber*" />
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                                <input type="text" name="aadress" class="form-control m-1" placeholder="tänav ja majanumber/talu*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="linn" class="form-control m-1" placeholder="linn/alevik/küla*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="vald" class="form-control m-1" placeholder="vald, maakond*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="sihtnumber" class="form-control m-1" placeholder="sihtnumber*" />
+                        </div>
+                    </div>
+                    <div class="row pl-1">
+                        <div class="col">
+                            <select name="riik" id="riik" class="form-control" autocomplete="country" tabindex="-1" aria-hidden="true"><option value="">Vali riik…</option><option value="AF">Afganistan</option><option value="AX">Ahvenamaa</option><option value="AL">Albaania</option><option value="DZ">Alžeeria</option><option value="AS">Ameerika Samoa</option><option value="US">Ameerika Ühendriigid (US)</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarktika</option><option value="AG">Antigua ja Barbuda</option><option value="AE">Araabia Ühendemiraadid</option><option value="AR">Argentiina</option><option value="AM">Armeenia</option><option value="AW">Aruuba</option><option value="AZ">Aserbaidžaan</option><option value="AU">Austraalia</option><option value="AT">Austria</option><option value="BS">Bahama</option><option value="BH">Bahrein</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="PW">Belau</option><option value="BE">Belgia</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Boliivia</option><option value="BQ">Bonaire, Saint Eustatius ja Saba</option><option value="BA">Bosnia ja Hertsegoviina</option><option value="BW">Botswana</option><option value="BV">Bouvet 'saar</option><option value="BR">Brasiilia</option><option value="IO">Briti India ookeani ala</option><option value="BN">Brunei</option><option value="BG">Bulgaaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CV">Cape Verde</option><option value="CK">Cooki saared</option><option value="CR">Costa Rica</option><option value="CW">Curaçao</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominikaani Vabariik</option><option value="EC">Ecuador</option><option value="EE" selected="selected">Eesti</option><option value="EG">Egiptus</option><option value="GQ">Ekvatoriaal-Guinea</option><option value="SV">El Salvador</option><option value="CI">Elevandiluurannik</option><option value="ER">Eritrea</option><option value="ET">Etioopia</option><option value="FO">Fääri saared</option><option value="FK">Falklandi saared</option><option value="FJ">Fidži</option><option value="PH">Filipiinid</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GD">Grenada</option><option value="GL">Gröönimaa</option><option value="GE">Gruusia</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heardi ja McDonaldi saared</option><option value="CN">Hiina</option><option value="ES">Hispaania</option><option value="NL">Holland</option><option value="HN">Honduras</option><option value="HK">Hongkong</option><option value="HR">Horvaatia</option><option value="TL">Ida-Timor</option><option value="IE">Iirimaa</option><option value="IL">Iisrael</option><option value="IN">India</option><option value="ID">Indoneesia</option><option value="IQ">Iraak</option><option value="IR">Iraan</option><option value="IS">Island</option><option value="IM">Isle of Man</option><option value="IT">Itaalia</option><option value="JP">Jaapan</option><option value="JM">Jamaika</option><option value="YE">Jeemen</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="CX">Jõulusaar</option><option value="KY">Kaimanisaared</option><option value="KH">Kambodža</option><option value="CM">Kamerun</option><option value="CA">Kanada</option><option value="KZ">Kasahstan</option><option value="QA">Katar</option><option value="KE">Kenya</option><option value="CF">Kesk-Aafrika Vabariik</option><option value="KI">Kiribati</option><option value="CO">Kolumbia</option><option value="KM">Komoorid</option><option value="CG">Kongo (Brazzaville)</option><option value="CD">Kongo (Kinshasa)</option><option value="CC">Kookossaared (Keelingi saared)</option><option value="KG">Kõrgõzstan</option><option value="GR">Kreeka</option><option value="CY">Küpros</option><option value="CU">Kuuba</option><option value="KW">Kuveit</option><option value="EH">Lääne-Saharas</option><option value="LA">Laos</option><option value="LV">Läti</option><option value="LT">Leedu</option><option value="LS">Lesotho</option><option value="LR">Libeeria</option><option value="LI">Liechtenstein</option><option value="LB">Liibanon</option><option value="LY">Liibüa</option><option value="ZA">Lõuna-Aafrika Vabariik</option><option value="GS">Lõuna-Georgia / Sandwichi saared</option><option value="KR">Lõuna-Korea</option><option value="SS">Lõuna-Sudaan</option><option value="LU">Luksemburg</option><option value="MO">Macao</option><option value="MG">Madagaskar</option><option value="MY">Malaisia</option><option value="MW">Malawi</option><option value="MV">Maldiivid</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MA">Maroko</option><option value="MH">Marshalli saared</option><option value="MQ">Martinique</option><option value="MR">Mauritaania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mehhiko</option><option value="FM">Mikroneesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongoolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MZ">Mosambiik</option><option value="MM">Myanmar</option><option value="NA">Namiibia</option><option value="NR">Nauru</option><option value="VG">Neitsisaared (Briti)</option><option value="VI">Neitsisaared (US)</option><option value="NP">Nepal</option><option value="NI">Nicaragua</option><option value="NG">Nigeeria</option><option value="NE">Niger</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="NO">Norra</option><option value="OM">Oman</option><option value="PG">Paapua Uus-Guinea</option><option value="PK">Pakistan</option><option value="PS">Palestiina</option><option value="PA">Panama</option><option value="PY">Paraguai</option><option value="PE">Peruu</option><option value="PN">Pitcairn</option><option value="KP">Põhja-Korea</option><option value="MP">Põhja-Mariaanid</option><option value="MK">Põhja-makedoonia</option><option value="PL">Poola</option><option value="PT">Portugal</option><option value="GF">Prantsuse Guajaana</option><option value="TF">Prantsuse Lõunaalad</option><option value="PF">Prantsuse Polüneesia</option><option value="FR">Prantsusmaa</option><option value="PR">Puerto Rico</option><option value="RE">Reunion</option><option value="SE">Rootsi</option><option value="RO">Rumeenia</option><option value="RW">Rwanda</option><option value="SB">Saalomoni saared</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts ja Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Martin (Hollandi osa)</option><option value="MF">Saint Martin (Prantsuse osa)</option><option value="VC">Saint Vincent ja Grenadiinid</option><option value="PM">Saint-Pierre ja Miquelon</option><option value="DE">Saksamaa</option><option value="ZM">Sambia</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">São Tomé ja Príncipe</option><option value="SA">Saudi Araabia</option><option value="SC">Seišellid</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SL">Sierra Leone</option><option value="SG">Singapur</option><option value="SK">Slovakkia</option><option value="SI">Sloveenia</option><option value="SO">Somaalia</option><option value="FI">Soome</option><option value="LK">Sri Lanka</option><option value="SD">Sudaani</option><option value="SR">Suriname</option><option value="SY">Süüria</option><option value="SZ">Svaasimaa</option><option value="SJ">Svalbard ja Jan Mayen</option><option value="CH">Šveits</option><option value="DK">Taani</option><option value="TJ">Tadžikistan</option><option value="TH">Tai</option><option value="TW">Taiwan</option><option value="TZ">Tansaania</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad ja Tobago</option><option value="TD">Tšaad</option><option value="CZ">Tšehhi Vabariik</option><option value="CL">Tšiili</option><option value="TN">Tuneesia</option><option value="TR">Türgi</option><option value="TM">Turkmenistan</option><option value="TC">Turks ja Caicos</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="GB">Ühendkuningriik (UK)</option><option value="UM">Ühendriikide hajasaared</option><option value="UA">Ukraina</option><option value="HU">Ungari</option><option value="UY">Uruguay</option><option value="UZ">Usbekistan</option><option value="NC">Uus-Kaledoonia</option><option value="NZ">Uus-Meremaa</option><option value="BY">Valgevene</option><option value="VU">Vanuatu</option><option value="VA">Vatikan</option><option value="RU">Venemaa</option><option value="VE">Venetsueela</option><option value="VN">Vietnam</option><option value="WF">Wallis ja Futuna</option><option value="ZW">Zimbabwe</option></select>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="px-4"><h5>Soovin kauba tarnet</h5></div>
+                    </div>
+                    <div class="row px-5 text-center">
+                        <div class="col-4">
+                           <label class="form-check-label">
+                               <input type="radio" class="form-check-input" name="ostjatyyp" value="1" onclick="showNone()" checked="checked"> arve aadressile</label>
+                            </div>        
+                       <div class="col-4">
+                           <label class="form-check-label">
+                               <input type="radio" class="form-check-input" name="ostjatyyp" value="1" onclick="showAddress()"> teisele aadressile</label>         
+                       </div>
+                       <div class="col-4">
+                           <label class="form-check-label">
+                               <input type="radio" class="form-check-input" name="ostjatyyp" value="1" onclick="showPakiautomaat()"> pakiautomaati</label>         
+                       </div>
+                    </div>
+                    <div class="tarne-teineaadress" id="showaddress" style="display: none">
+                        <div class="row mt-4 px-4"><h5>Tarne aadress:</h5></div>
+                        <div class="row">
+                        <div class="col">
+                                <input type="text" name="aadress" class="form-control m-1" placeholder="tänav ja majanumber/talu*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="linn" class="form-control m-1" placeholder="linn/alevik/küla*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="vald" class="form-control m-1" placeholder="vald, maakond*" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                                <input type="text" name="sihtnumber" class="form-control m-1" placeholder="sihtnumber*" />
+                        </div>
+                    </div>
+                    <div class="row pl-1">
+                        <div class="col">
+                            <select name="riik" id="riik" class="form-control" autocomplete="country" tabindex="-1" aria-hidden="true"><option value="">Vali riik…</option><option value="AF">Afganistan</option><option value="AX">Ahvenamaa</option><option value="AL">Albaania</option><option value="DZ">Alžeeria</option><option value="AS">Ameerika Samoa</option><option value="US">Ameerika Ühendriigid (US)</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarktika</option><option value="AG">Antigua ja Barbuda</option><option value="AE">Araabia Ühendemiraadid</option><option value="AR">Argentiina</option><option value="AM">Armeenia</option><option value="AW">Aruuba</option><option value="AZ">Aserbaidžaan</option><option value="AU">Austraalia</option><option value="AT">Austria</option><option value="BS">Bahama</option><option value="BH">Bahrein</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="PW">Belau</option><option value="BE">Belgia</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Boliivia</option><option value="BQ">Bonaire, Saint Eustatius ja Saba</option><option value="BA">Bosnia ja Hertsegoviina</option><option value="BW">Botswana</option><option value="BV">Bouvet 'saar</option><option value="BR">Brasiilia</option><option value="IO">Briti India ookeani ala</option><option value="BN">Brunei</option><option value="BG">Bulgaaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="CV">Cape Verde</option><option value="CK">Cooki saared</option><option value="CR">Costa Rica</option><option value="CW">Curaçao</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominikaani Vabariik</option><option value="EC">Ecuador</option><option value="EE" selected="selected">Eesti</option><option value="EG">Egiptus</option><option value="GQ">Ekvatoriaal-Guinea</option><option value="SV">El Salvador</option><option value="CI">Elevandiluurannik</option><option value="ER">Eritrea</option><option value="ET">Etioopia</option><option value="FO">Fääri saared</option><option value="FK">Falklandi saared</option><option value="FJ">Fidži</option><option value="PH">Filipiinid</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GD">Grenada</option><option value="GL">Gröönimaa</option><option value="GE">Gruusia</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heardi ja McDonaldi saared</option><option value="CN">Hiina</option><option value="ES">Hispaania</option><option value="NL">Holland</option><option value="HN">Honduras</option><option value="HK">Hongkong</option><option value="HR">Horvaatia</option><option value="TL">Ida-Timor</option><option value="IE">Iirimaa</option><option value="IL">Iisrael</option><option value="IN">India</option><option value="ID">Indoneesia</option><option value="IQ">Iraak</option><option value="IR">Iraan</option><option value="IS">Island</option><option value="IM">Isle of Man</option><option value="IT">Itaalia</option><option value="JP">Jaapan</option><option value="JM">Jamaika</option><option value="YE">Jeemen</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="CX">Jõulusaar</option><option value="KY">Kaimanisaared</option><option value="KH">Kambodža</option><option value="CM">Kamerun</option><option value="CA">Kanada</option><option value="KZ">Kasahstan</option><option value="QA">Katar</option><option value="KE">Kenya</option><option value="CF">Kesk-Aafrika Vabariik</option><option value="KI">Kiribati</option><option value="CO">Kolumbia</option><option value="KM">Komoorid</option><option value="CG">Kongo (Brazzaville)</option><option value="CD">Kongo (Kinshasa)</option><option value="CC">Kookossaared (Keelingi saared)</option><option value="KG">Kõrgõzstan</option><option value="GR">Kreeka</option><option value="CY">Küpros</option><option value="CU">Kuuba</option><option value="KW">Kuveit</option><option value="EH">Lääne-Saharas</option><option value="LA">Laos</option><option value="LV">Läti</option><option value="LT">Leedu</option><option value="LS">Lesotho</option><option value="LR">Libeeria</option><option value="LI">Liechtenstein</option><option value="LB">Liibanon</option><option value="LY">Liibüa</option><option value="ZA">Lõuna-Aafrika Vabariik</option><option value="GS">Lõuna-Georgia / Sandwichi saared</option><option value="KR">Lõuna-Korea</option><option value="SS">Lõuna-Sudaan</option><option value="LU">Luksemburg</option><option value="MO">Macao</option><option value="MG">Madagaskar</option><option value="MY">Malaisia</option><option value="MW">Malawi</option><option value="MV">Maldiivid</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MA">Maroko</option><option value="MH">Marshalli saared</option><option value="MQ">Martinique</option><option value="MR">Mauritaania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mehhiko</option><option value="FM">Mikroneesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongoolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MZ">Mosambiik</option><option value="MM">Myanmar</option><option value="NA">Namiibia</option><option value="NR">Nauru</option><option value="VG">Neitsisaared (Briti)</option><option value="VI">Neitsisaared (US)</option><option value="NP">Nepal</option><option value="NI">Nicaragua</option><option value="NG">Nigeeria</option><option value="NE">Niger</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="NO">Norra</option><option value="OM">Oman</option><option value="PG">Paapua Uus-Guinea</option><option value="PK">Pakistan</option><option value="PS">Palestiina</option><option value="PA">Panama</option><option value="PY">Paraguai</option><option value="PE">Peruu</option><option value="PN">Pitcairn</option><option value="KP">Põhja-Korea</option><option value="MP">Põhja-Mariaanid</option><option value="MK">Põhja-makedoonia</option><option value="PL">Poola</option><option value="PT">Portugal</option><option value="GF">Prantsuse Guajaana</option><option value="TF">Prantsuse Lõunaalad</option><option value="PF">Prantsuse Polüneesia</option><option value="FR">Prantsusmaa</option><option value="PR">Puerto Rico</option><option value="RE">Reunion</option><option value="SE">Rootsi</option><option value="RO">Rumeenia</option><option value="RW">Rwanda</option><option value="SB">Saalomoni saared</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts ja Nevis</option><option value="LC">Saint Lucia</option><option value="SX">Saint Martin (Hollandi osa)</option><option value="MF">Saint Martin (Prantsuse osa)</option><option value="VC">Saint Vincent ja Grenadiinid</option><option value="PM">Saint-Pierre ja Miquelon</option><option value="DE">Saksamaa</option><option value="ZM">Sambia</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">São Tomé ja Príncipe</option><option value="SA">Saudi Araabia</option><option value="SC">Seišellid</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SL">Sierra Leone</option><option value="SG">Singapur</option><option value="SK">Slovakkia</option><option value="SI">Sloveenia</option><option value="SO">Somaalia</option><option value="FI">Soome</option><option value="LK">Sri Lanka</option><option value="SD">Sudaani</option><option value="SR">Suriname</option><option value="SY">Süüria</option><option value="SZ">Svaasimaa</option><option value="SJ">Svalbard ja Jan Mayen</option><option value="CH">Šveits</option><option value="DK">Taani</option><option value="TJ">Tadžikistan</option><option value="TH">Tai</option><option value="TW">Taiwan</option><option value="TZ">Tansaania</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad ja Tobago</option><option value="TD">Tšaad</option><option value="CZ">Tšehhi Vabariik</option><option value="CL">Tšiili</option><option value="TN">Tuneesia</option><option value="TR">Türgi</option><option value="TM">Turkmenistan</option><option value="TC">Turks ja Caicos</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="GB">Ühendkuningriik (UK)</option><option value="UM">Ühendriikide hajasaared</option><option value="UA">Ukraina</option><option value="HU">Ungari</option><option value="UY">Uruguay</option><option value="UZ">Usbekistan</option><option value="NC">Uus-Kaledoonia</option><option value="NZ">Uus-Meremaa</option><option value="BY">Valgevene</option><option value="VU">Vanuatu</option><option value="VA">Vatikan</option><option value="RU">Venemaa</option><option value="VE">Venetsueela</option><option value="VN">Vietnam</option><option value="WF">Wallis ja Futuna</option><option value="ZW">Zimbabwe</option></select>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="tarne-pakiautomaat" id="showpakiautomaat" style="display: none">
+                        <div class="row mt-4 px-4"><h5>Vali Itella SmartPost automaat:</h5></div>
+                        <div class="row pl-1">
+                            <div class="col">
+                                <select class="form-control" name="itella">
+                                    <option value="1">Automaat 1</option>
+                                    <option value="2">Automaat 2</option>
+                                    <option value="3">Automaat 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5 px-4">
+                        <h5>Vali pank, kust soovid maksta:</h5>
+                    </div>
+                    <div class="row pl-1">
+                        <div class="col">
+                                <select class="form-control" name="pank">
+                                    <option value="1">Swedbank</option>
+                                    <option value="2">SEB</option>
+                                    <option value="3">LHV</option>
+                                    <option value="4">Luminor</option>
+                                    <option value="5">Coop Pank</option>
+                                </select>
+                            </div>
+                    </div>
+                    <div class="row mt-3 pl-4">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="termsagree" value="ok"> Nõustun veebipoe <a href="#" class="text-dark">kasutustingimustega</a>*
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mt-3 pl-4 text-muted">
+                        <h6>Tärniga (*) on tähistatud kohustuslikud väljad</h6>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="p-2 mx-auto">
+                            <a href="kinnitus.html" class="btn btn-dark btn-lg mb-3">Kinnitan tellimuse ja lähen panka tasuma</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                    </div>           
+                </div>   
+            </div>
+        </section>
+        <!-- jalus -->
+    <footer class="bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- TODO! --->
+                <div class="col-lg-12 text-center text-white">
+                    <p>&copy; 2021 Head Seebid OÜ<br />
+                        Seebimulli pst 12, Vahu küla, Tartumaa<br />
+                        Reg. kood 90090900<br />
+                        kirjutameile /ät/ headseebid.ee</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-lg-12 text-center">
+                    <a class="btn btn-light pt-1 pb-1 px-3" href="meist.html" role="button">Loe meist rohkem</a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center">
+                    <p class="sm-opacity">
+                        <a href="#"><img src="https://img.icons8.com/fluent-systems-regular/48/ffffff/facebook-new--v1.png" /></a> &nbsp;
+                        <a href="#"><img src="https://img.icons8.com/fluent-systems-regular/48/ffffff/instagram-new--v1.png" /></a> &nbsp;
+                        <a href="#"><img src="https://img.icons8.com/fluent-systems-regular/48/ffffff/tumblr.png" /></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    </body>
+</html>         
